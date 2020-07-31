@@ -1,0 +1,100 @@
+.header_section {
+    background-color: #000;
+    position: relative;
+    background-image: url("../image/Covid19.jpg"), url("../image/Mask.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left;
+    background-size: 110px 100px, 110px 100px;
+}
+
+.header_section_border_bottom_gray {
+    border-bottom: 1px solid #BEBEBE;
+}
+
+.header_content {
+    max-width: 1260px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header_logo {
+    height: 8em;
+    float: left;
+    text-transform: uppercase;
+}
+
+.logo_text {
+	color: #fff;
+    text-transform: uppercase;
+    padding-left: .33333em;
+}
+
+.container{
+	color: #0000FF;
+    width: available;
+    height: available;
+}
+
+.table {
+	border-collapse: collapse;
+}
+
+.toppane{
+    width: available;
+    border-collapse: collapse;
+    min-height: 100px;
+}
+
+.leftpane{
+    width: 15%;
+    min-width: 120px;
+    height: available;
+    min-height: 448px;
+    float: left;
+    background-color: #F5F5F5;
+    border-collapse: collapse;
+}
+
+.middlepane{
+   width: 70%;
+   min-width: 640px;
+   height: available;
+   min-height: 445px;
+   float: left;
+   background-color: #F5F5F5;
+   border-collapse: collapse;
+}
+
+.rightpane{
+    width: 15%;
+    min-width: 100px;
+    height: available;
+    min-height: 445px;
+    float: right;
+    background-color: #F5F5F5;
+    border-collapse: collapse;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: right;
+}

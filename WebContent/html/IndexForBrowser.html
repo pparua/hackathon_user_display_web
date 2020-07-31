@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chrset="UTF 8">
+    <title>Covid 19 Preventive Care</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+    <script src="js/Sample.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+	<script src="js/angular-chart.js"></script>
+	<script src="js/angular-chart.min.js"></script>
+	<link rel="stylesheet" href="css/Sample.css"/>
+</head>
+<body ng-app="sampleApp" style="background-color: #202124;">
+
+<div class="header_section header_section_border_bottom_gray" style="width: 1350px; height: 60px;">
+ <div class="header_content">
+	<span class="logo_text"><center><font size="5">Covid 19 Preventive Care</font></center></span>
+ </div>
+</div>
+
+<div ng-controller="sampleController">
+    <div class="toppane" align="center">
+    	<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td><span class="logo_text"><font style="font-family:'Arial, Helvetica, sans-serif'">Organisation:</font></span></td>
+					<td><input type="text" value="Cognizant Technology Solutions India Pvt Ltd" disabled="disabled" size="45" style="font-family: 'Lucida Console', Courier, monospace; background-color: #FFFFFF;"/></td>
+				</tr>
+				<tr>
+					<td><span class="logo_text"><font style="font-family:'Arial, Helvetica, sans-serif'">Location:</font></span></td>
+					<td>
+						<select ng-model="location">
+							<option value="2002" style="font-family: 'Lucida Console', Courier, monospace;">Open Street</option>
+							<option value="2003" style="font-family: 'Lucida Console', Courier, monospace;">Roof Top</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><span class="logo_text"><font style="font-family:'Arial, Helvetica, sans-serif'">For Date:</font></span></td>
+					<td><input type="text" ng-model="startDateTime" disabled="disabled" size="17" style="font-family: 'Lucida Console', Courier, monospace; background-color: #FFFFFF;"/></td>
+				</tr>
+				<!--  
+				<tr>
+					<td><font style="font-family:'Arial, Helvetica, sans-serif'">End Date/Time:</font></td>
+					<td><input type="text" ng-model="endDateTime" disabled="disabled" size="17" style="font-family: 'Lucida Console', Courier, monospace;"/></td>
+				</tr>
+				-->
+				<tr>
+					<td colspan="2">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button ng-click="submitUserDetails()" class="button">Submit</button> 
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						<button onclick="location.href=window.location.href;" class="button">Clear</button>
+					</td>
+				</tr>
+	        </tbody>
+        </table>
+    </div>
+    <div class="leftpane" ng-include="'html/pieChart.html'"></div>
+    <div class="middlepane" ng-include="'html/middlePaneTable.html'"></div>
+    <div class="rightpane" ng-include="'html/rightPaneTable.html'"></div>
+    <div class="footer">@Copyright 2020</div>
+</div>
+</body>
+</html>
