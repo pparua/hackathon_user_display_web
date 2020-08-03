@@ -3,9 +3,9 @@ var sampleApp = angular.module('sampleApp',["chart.js"]);
 sampleApp.service("GridMapDetailsService",['$http', function ($http) {
     this.getGridMapDetailsGetService = function (location) {
 	   if(location == "2002") {
-		   return $http.get('<Snippets_Url>');
+		   return $http.get('https://<<CLOUD_FOUNDRY_ENDPOINT>>/getPlottedLayoutSnippets?location=2002&forDate=07-27-2020');
 	   } else {
-		   return $http.get('<Snippets_Url>');
+		   return $http.get('https://<<CLOUD_FOUNDRY_ENDPOINT>>/getPlottedLayoutSnippets?location=2003&forDate=07-27-2020');
 	   }
     }
 }]);
@@ -24,14 +24,14 @@ sampleApp.controller("sampleController", ['$scope', 'GridMapDetailsService', fun
 		var crTwoNb = 0;
 		var crThreeNb = 0;
 		var selLocaion = $scope.location;
-		$scope.firstImgName = "<Parent_Image_Url>";
+		$scope.firstImgName = "<<FLOOR_LAYOUT_IMAGE_URL_IN_IBM_CLOUD_OBJECT_STORE>>";
 		if(selLocaion == "2002") {
-			$scope.parentImgName = "<Parent_Image_Url>";
+			$scope.parentImgName = "https://<<CLOUD_FOUNDRY_ENDPOINT>>/GetPlottedLayout?location=2002&forDate=07-27-2020";
 			crOneNb = 12;
 			crTwoNb = 8;
 			crThreeNb = 5;
 		} else {
-			$scope.parentImgName = "<Parent_Image_Url>";
+			$scope.parentImgName = "https://<<CLOUD_FOUNDRY_ENDPOINT>>/GetPlottedLayout?location=2003&forDate=07-27-2020";
 			crOneNb = 2;
 			crTwoNb = 0;
 			crThreeNb = 1;
